@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Monster Hunter Wheel Party Hunt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-buttons">
+    <button onclick="spinSet('expert')">SPIN EXPERT</button>
+    <button onclick="spinSet('master')">SPIN MAÎTRE</button>
+    <button onclick="spinRandom()">RANDOM ALL</button>
+    <button onclick="spinForPlayers()">MISSION MULTI-JOUEURS</button>
+</div>
+
+<header>
+    <h1>Monster Hunter Rise Sunbreak Wheel Party Hunt</h1>
+</header>
+
+<main>
+
+    <section class="wheel-section">
+        <h2>Armes</h2>
+        <div class="pointer"></div>
+        <div class="wheel-container">
+          <canvas id="weaponWheel" width="500" height="500"></canvas>
+            <button onclick="spinWheel('weaponWheel')">SPIN</button>
+        </div>
+        <p class="result" id="weaponWheelResult"></p>
+    </section>
+
+    <section class="wheel-section">
+        <h2>Monstres (Expert)</h2>
+        <div class="pointer"></div>
+        <div class="wheel-container">
+           <canvas id="monsterExpertWheel" width="500" height="500"></canvas>
+            <button onclick="spinWheel('monsterExpertWheel')">SPIN</button>
+        </div>
+        <p class="result" id="monsterExpertWheelResult"></p>
+    </section>
+
+    <section class="wheel-section">
+        <h2>Monstres (Maître)</h2>
+        <div class="pointer"></div>
+        <div class="wheel-container">
+           <canvas id="monsterMasterWheel" width="800" height="800"></canvas>
+            <button onclick="spinWheel('monsterMasterWheel')">SPIN</button>
+        </div>
+        <p class="result" id="monsterMasterWheelResult"></p>
+    </section>
+
+    <section class="wheel-section">
+        <h2>Conditions</h2>
+        <div class="pointer"></div>
+        <div class="wheel-container">
+            <canvas id="conditionsWheel" width="1000" height="1000"></canvas>
+            <button onclick="spinWheel('conditionsWheel')">SPIN</button>
+        </div>
+          <button class="spin-btn" id="multiSpinBtn">SPIN MULTI (x2)</button>
+
+    <p class="result" id="conditionsWheelResult"></p>
+        <p class="result" id="conditionsWheelResult"></p>
+    </section>
+
+</main>
+
+
+<div id="resultPopup" class="popup">
+    <div class="popup-content">
+        <h2>Résultats</h2>
+        <p id="popupMode"></p>
+        <p id="popupWeapon"></p>
+        <p id="popupMonster"></p>
+        <p id="popupCondition"></p>
+        <button onclick="closePopup()">Fermer</button>
+    </div>
+</div>
+<div id="multiPopup" class="popup">
+    <div class="popup-content">
+        <h2>Mission Multi‑Joueurs</h2>
+        <div id="multiResults"></div>
+        <button onclick="closeMultiPopup()">Fermer</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+<footer>
+    <a href="mhworld.html"  class="button"> Monster hunter World iceborne</a>
+
+    <a href="mhwilds.html" class="button">Monster Hunter Wilds</a>
+    <p>Bonne chasse a tous les chasseurs</p>
+</footer>
+</html>

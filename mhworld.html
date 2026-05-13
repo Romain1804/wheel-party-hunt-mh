@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Monster Hunter World Iceborne – Wheel Party Hunt</title>
+    <link rel="stylesheet" href="stylemhworld.css">
+</head>
+
+<body>
+
+<!-- BOUTONS DU HAUT -->
+<div class="top-buttons">
+    <button onclick="spinSet('expert')">SPIN EXPERT</button>
+    <button onclick="spinSet('master')">SPIN MAÎTRE</button>
+    <button onclick="spinRandom()">RANDOM ALL</button>
+    <button onclick="spinForPlayers()">MISSION MULTI-JOUEURS</button>
+</div>
+
+<header>
+    <h1>Monster Hunter World Iceborne – Wheel Party Hunt</h1>
+</header>
+
+<main>
+
+    <!-- ROUE ARMES -->
+    <section class="wheel-section">
+        <h2>Armes</h2>
+        <div class="pointer"></div>
+
+        <div class="wheel-container">
+            <canvas id="weaponWheel" width="500" height="500"></canvas>
+            <button onclick="spinWheel('weaponWheel')">SPIN</button>
+        </div>
+
+        <p class="result" id="weaponWheelResult"></p>
+    </section>
+
+    <!-- ROUE MONSTRES EXPERT -->
+    <section class="wheel-section">
+        <h2>Monstres (Expert)</h2>
+        <div class="pointer"></div>
+
+        <div class="wheel-container">
+            <canvas id="monsterExpertWheel" width="500" height="500"></canvas>
+            <button onclick="spinWheel('monsterExpertWheel')">SPIN</button>
+        </div>
+
+        <p class="result" id="monsterExpertWheelResult"></p>
+    </section>
+
+    <!-- ROUE MONSTRES MAÎTRE -->
+    <section class="wheel-section">
+        <h2>Monstres (Maître)</h2>
+        <div class="pointer"></div>
+
+        <div class="wheel-container">
+            <canvas id="monsterMasterWheel" width="800" height="800"></canvas>
+            <button onclick="spinWheel('monsterMasterWheel')">SPIN</button>
+        </div>
+
+        <p class="result" id="monsterMasterWheelResult"></p>
+    </section>
+
+    <!-- ROUE CONDITIONS -->
+    <section class="wheel-section">
+        <h2>Conditions</h2>
+        <div class="pointer"></div>
+
+        <div class="wheel-container">
+            <canvas id="conditionsWheel" width="900" height="900"></canvas>
+            <button onclick="spinWheel('conditionsWheel')">SPIN</button>
+        </div>
+
+        <!-- BOUTON MULTI CONDITIONS -->
+        <button class="spin-btn" id="multiSpinBtn">SPIN MULTI (x2)</button>
+
+        <p class="result" id="conditionsWheelResult"></p>
+    </section>
+
+</main>
+
+<!-- POPUP RESULTAT -->
+<div id="resultPopup" class="popup">
+    <div class="popup-content">
+        <h2>Résultats</h2>
+        <p id="popupMode"></p>
+        <p id="popupWeapon"></p>
+        <p id="popupMonster"></p>
+        <p id="popupCondition"></p>
+        <button onclick="closePopup()">Fermer</button>
+    </div>
+</div>
+
+<!-- POPUP MULTI-JOUEURS -->
+<div id="multiPopup" class="popup">
+    <div class="popup-content">
+        <h2>Mission Multi‑Joueurs</h2>
+        <div id="multiResults"></div>
+        <button onclick="closeMultiPopup()">Fermer</button>
+    </div>
+</div>
+
+<script src="scriptmhworld.js"></script>
+
+<footer>
+    <a href="index.html" class="button">Monster Hunter Wilds</a>
+    <a href="mhwilds.html" class="button">Monster Hunter Wilds Wheel</a>
+    <p>Bonne chasse à tous les chasseurs</p>
+</footer>
+
+</body>
+</html>
